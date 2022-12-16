@@ -1,0 +1,25 @@
+#gnuplot "goodDataPloting.txt"
+set format x "%1.1e"
+set format y "%1.1e"
+set format z "%1.1e"
+
+#set xlabel "X axis"
+#set ylabel "Y axis"
+#set zlabel "Z axis"
+set nokey
+set xtics font ", 12"
+set ytics font ", 12"
+set ztics font ", 12"
+
+set palette model RGB
+
+splot "iteration100.txt" using 1:2:3:3 notitle with points lt 7 lw 1 lc palette
+
+#splot "iteration1000.txt" using 1:2:3:3 notitle with points lt 7 lw 1 lc palette
+
+#splot "iteration10000.txt" using 1:2:3:3 notitle with points lt 7 lw 1 lc palette
+
+
+
+
+pause mouse close
